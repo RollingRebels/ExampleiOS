@@ -16,25 +16,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello world" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcb-2g-h7E">
-                                <rect key="frame" x="20" y="437.5" width="374" height="21"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="94i-BK-n3H">
+                                <rect key="frame" x="20" y="66" width="374" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="jP0-l9-MUN"/>
+                                    <constraint firstAttribute="height" constant="34" id="3Pa-FO-1Fv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcb-2g-h7E">
+                                <rect key="frame" x="20" y="175" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="55N-yp-8Fv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdA-5s-AxB">
+                                <rect key="frame" x="20" y="132" width="374" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="hrN-LX-fzG"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Say Hello"/>
+                                <connections>
+                                    <action selector="helloButton_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zCS-hn-mBU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Jcb-2g-h7E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CHG-Jl-Pww"/>
-                            <constraint firstItem="Jcb-2g-h7E" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Dd7-pI-51n"/>
-                            <constraint firstItem="Jcb-2g-h7E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V6W-qb-QG4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jcb-2g-h7E" secondAttribute="trailing" constant="20" id="aOR-lJ-j1a"/>
+                            <constraint firstItem="94i-BK-n3H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0QR-TN-TUF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="94i-BK-n3H" secondAttribute="trailing" constant="20" id="7Ga-j7-dCK"/>
+                            <constraint firstItem="Jcb-2g-h7E" firstAttribute="top" secondItem="zdA-5s-AxB" secondAttribute="bottom" constant="12" id="CKs-ow-Fdb"/>
+                            <constraint firstItem="zdA-5s-AxB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KXM-EL-IsU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zdA-5s-AxB" secondAttribute="trailing" constant="20" id="NE5-mc-BFT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jcb-2g-h7E" secondAttribute="trailing" constant="20" id="YST-4X-z7T"/>
+                            <constraint firstItem="Jcb-2g-h7E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ePt-s2-OzO"/>
+                            <constraint firstItem="zdA-5s-AxB" firstAttribute="top" secondItem="94i-BK-n3H" secondAttribute="bottom" constant="32" id="jNI-0e-KBd"/>
+                            <constraint firstItem="94i-BK-n3H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="ngr-1s-3d5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingLabel" destination="Jcb-2g-h7E" id="ajj-g3-DsD"/>
+                        <outlet property="nameTextField" destination="94i-BK-n3H" id="QDg-RB-Nce"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
